@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Game Visualization</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        canvas { border: 1px solid #000; }
+    </style>
+</head>
+<body>
+    <canvas id="chaosCanvas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('chaosCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set up the triangle vertices
+        const vertices = [
+            {x: 300, y: 100},
+            {x: 100, y: 500},
+            {x: 500, y: 500}
+        ];
+        
+        // Draw the triangle
+        ctx.beginPath();
+        ctx.moveTo(vertices[0].x, vertices[0].y);
+        ctx.lineTo(vertices[1].x, vertices[1].y);
+        ctx.lineTo(vertices[2].x, vertices[2].y);
+        ctx.closePath();
+        ctx.stroke();
+        
+        // Start with a random point
+        let point = {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height
+        };
+        
+        function drawPoint() {
+            // Choose a random vertex
+            const vertex = vertices[Math.floor(Math.random() * vertices.length)];
+            
+            // Move the point halfway to the chosen vertex
+            point.x = (point.x + vertex.x) / 2;
+            point.y = (point.y + vertex.y) / 2;
+            
+            // Draw the point
+            ctx.fillRect(point.x, point.y, 1, 1);
+            
+            // Schedule the next point
+            requestAnimationFrame(drawPoint);
+        }
+        
+        // Start the animation
+        drawPoint();
+    </script>
+</body>
+</html>

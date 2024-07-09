@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for jeffschim</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
+</head>
+<body>
+    <script>
+        let scene, camera, renderer, geometry, material, line, axes;
+        let x = 0.1, y = 0, z = 0;
+        const σ = 10, ρ = 28, β = 8/3;
+        const dt = 0.01;
+        const points = [];
+        let hue = 0;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            geometry = new THREE.BufferGeometry();
+            material = new THREE.LineBasicMaterial({ color: 0x00ff00 });
+            line = new THREE.Line(geometry, material);
+            scene.add(line);
+
+            // Add white axes
+            axes = new THREE.AxesHelper(50);
+            axes.material.setValues({ color: 0xffffff });  // Set axes color to white
+            scene.add(axes);
+
+            camera.position.set(70, 70, 70);
+            camera.lookAt(scene.position);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Lorenz equations
+            const dx = σ * (y - x) * dt;
+            const dy = (x * (ρ - z) - y) * dt;
+            const dz = (x * y - β * z) * dt;
+
+            x += dx;
+            y += dy;
+            z += dz;
+
+            points.push(new THREE.Vector3(x, y, z));
+
+            if (points.length > 5000) {
+                points.shift();
+            }
+
+            geometry.setFromPoints(points);
+
+            // Update color
+            hue = (hue + 0.5) % 360;
+            material.color.setHSL(hue / 360, 1, 0.5);
+
+            // Rotate the entire scene
+            scene.rotation.x += 0.002;
+            scene.rotation.y += 0.003;
+
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize, false);
+
+        init();
+        animate();
+    </script>
+</body>
+</html>
