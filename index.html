@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website for jeffschim</title>
+    <title>jeffschim.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         body { margin: 0; overflow: hidden; }
+        #header {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            color: white;
+            z-index: 1000;
+        }
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
     </style>
 </head>
-<body>
+<body class="black">
+    <div id="header"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        let scene, camera, renderer, geometry, material, line, axes;
+        let scene, camera, renderer, geometry, material, line;
         let x = 0.1, y = 0, z = 0;
         const σ = 10, ρ = 28, β = 8/3;
         const dt = 0.01;
@@ -30,13 +49,20 @@
             line = new THREE.Line(geometry, material);
             scene.add(line);
 
-            // Add white axes
-            axes = new THREE.AxesHelper(50);
-            axes.material.setValues({ color: 0xffffff });  // Set axes color to white
-            scene.add(axes);
-
             camera.position.set(70, 70, 70);
             camera.lookAt(scene.position);
+
+            // Create header
+            const header = document.getElementById('header');
+            const text = "jeffschim.com";
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.className = 'letter';
+                span.textContent = text[i];
+                header.appendChild(span);
+            }
+
+            revealLetters();
         }
 
         function animate() {
@@ -68,6 +94,27 @@
             scene.rotation.y += 0.003;
 
             renderer.render(scene, camera);
+        }
+
+        function revealLetters() {
+            const letters = document.querySelectorAll('.letter');
+            let revealedLetters = new Set();
+            
+            function revealNextLetter() {
+                if (revealedLetters.size === letters.length) return;
+
+                let index;
+                do {
+                    index = Math.floor(Math.random() * letters.length);
+                } while (revealedLetters.has(index));
+
+                letters[index].style.opacity = '1';
+                revealedLetters.add(index);
+
+                setTimeout(revealNextLetter, 100);
+            }
+
+            revealNextLetter();
         }
 
         function onWindowResize() {

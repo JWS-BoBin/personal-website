@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenz Attractor Animation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        #warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #warning-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+        }
+        #toggle-version {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .btn-floating {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-floating i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="warning">
+        <div id="warning-content" class="card">
+            <div class="card-body">
+                <h5 class="card-title">Epilepsy Warning</h5>
+                <p class="card-text">This animation contains flashing colors and motion that may trigger seizures in people with photosensitive epilepsy.</p>
+            </div>
+            <div class="card-footer">
+                <button id="proceed" class="btn btn-primary me-2">Proceed to Animated Version</button>
+                <button id="safe-version" class="btn btn-secondary">Use Safe Version</button>
+            </div>
+        </div>
+    </div>
+    <button id="toggle-version" class="btn btn-floating btn-danger" style="display:none;">
+        <i class="bi bi-arrow-left-right"></i>
+    </button>
+    <canvas id="lorenzCanvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let scene, camera, renderer, geometry, material, line;
+        let x = 0.1, y = 0, z = 0;
+        const σ = 10, ρ = 28, β = 8/3;
+        const dt = 0.01;
+        const points = [];
+        let hue = 0;
+        let isAnimatedVersion = true;
+
+        // Original version (potentially triggering)
+        function initAnimated() {
+            const canvas = document.getElementById('lorenzCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function lorenz() {
+                const dx = σ * (y - x) * dt;
+                const dy = (x * (ρ - z) - y) * dt;
+                const dz = (x * y - β * z) * dt;
+                x += dx; y += dy; z += dz;
+                points.push({x, y, z});
+                if (points.length > 5000) points.shift();
+            }
+
+            let angle = 0;
+            function rotatePoint(x, y, z) {
+                const cosA = Math.cos(angle), sinA = Math.sin(angle);
+                return { x: x * cosA - z * sinA, y: y, z: x * sinA + z * cosA };
+            }
+
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                const scale = 10, centerX = canvas.width / 2, centerY = canvas.height / 2;
+                ctx.beginPath();
+                points.forEach((point, index) => {
+                    const rotated = rotatePoint(point.x, point.y, point.z);
+                    const screenX = centerX + rotated.x * scale;
+                    const screenY = centerY + rotated.z * scale;
+                    index === 0 ? ctx.moveTo(screenX, screenY) : ctx.lineTo(screenX, screenY);
+                });
+                ctx.strokeStyle = `hsl(${(y + 30) * 3}, 100%, 50%)`;
+                ctx.stroke();
+                angle += 0.005;
+            }
+
+            function animate() {
+                if (isAnimatedVersion) {
+                    lorenz();
+                    draw();
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            animate();
+        }
+
+        // Safe version (your version, now with closer perspective)
+        function initSafe() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            geometry = new THREE.BufferGeometry();
+            material = new THREE.LineBasicMaterial({ color: 0x00ff00 });
+            line = new THREE.Line(geometry, material);
+            scene.add(line);
+
+            camera.position.set(100, 100, 100);
+            camera.lookAt(scene.position);
+
+            function animate() {
+                if (!isAnimatedVersion) {
+                    requestAnimationFrame(animate);
+
+                    const dx = σ * (y - x) * dt;
+                    const dy = (x * (ρ - z) - y) * dt;
+                    const dz = (x * y - β * z) * dt;
+
+                    x += dx; y += dy; z += dz;
+
+                    points.push(new THREE.Vector3(x, y, z));
+                    if (points.length > 5000) points.shift();
+
+                    geometry.setFromPoints(points);
+
+                    hue = (hue + 0.5) % 360;
+                    material.color.setHSL(hue / 360, 1, 0.5);
+
+                    scene.rotation.x += 0.002;
+                    scene.rotation.y += 0.003;
+
+                    renderer.render(scene, camera);
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }, false);
+
+            animate();
+        }
+
+        function toggleVersion() {
+            isAnimatedVersion = !isAnimatedVersion;
+            document.body.innerHTML = '<button id="toggle-version" class="btn btn-floating btn-danger"><i class="bi bi-arrow-left-right"></i></button><canvas id="lorenzCanvas"></canvas>';
+            document.getElementById('toggle-version').addEventListener('click', toggleVersion);
+            if (isAnimatedVersion) {
+                initAnimated();
+            } else {
+                initSafe();
+            }
+        }
+
+        document.getElementById('proceed').addEventListener('click', () => {
+            document.getElementById('warning').style.display = 'none';
+            document.getElementById('toggle-version').style.display = 'block';
+            initAnimated();
+        });
+
+        document.getElementById('safe-version').addEventListener('click', () => {
+            document.getElementById('warning').style.display = 'none';
+            document.getElementById('toggle-version').style.display = 'block';
+            isAnimatedVersion = false;
+            initSafe();
+        });
+
+        document.getElementById('toggle-version').addEventListener('click', toggleVersion);
+    </script>
+</body>
+</html>
