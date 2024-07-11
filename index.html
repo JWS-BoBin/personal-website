@@ -33,26 +33,29 @@
         let scene, camera, renderer, geometry, material, line;
         let x = 0.1, y = 0, z = 0;
         const σ = 10, ρ = 28, β = 8/3;
-        const dt = 0.01;
+        const dt = 0.005; // Reduced time step for smoother curve
         const points = [];
         let hue = 0;
 
         function init() {
             scene = new THREE.Scene();
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            renderer = new THREE.WebGLRenderer();
+            renderer = new THREE.WebGLRenderer({ antialias: true }); // Enable antialiasing
+            renderer.setPixelRatio(window.devicePixelRatio); // Adjust for high DPI displays
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
 
             geometry = new THREE.BufferGeometry();
-            material = new THREE.LineBasicMaterial({ color: 0x00ff00 });
+            material = new THREE.LineBasicMaterial({
+                color: 0x00ff00,
+                linewidth: 2, // Increase line width
+            });
             line = new THREE.Line(geometry, material);
             scene.add(line);
 
-            camera.position.set(70, 70, 70);
+            camera.position.set(40, 40, 40);
             camera.lookAt(scene.position);
 
-            // Create header
             const header = document.getElementById('header');
             const text = "jeffschim.com";
             for (let i = 0; i < text.length; i++) {
@@ -77,19 +80,18 @@
             y += dy;
             z += dz;
 
-            points.push(new THREE.Vector3(x, y, z));
+            const scale = 2;
+            points.push(new THREE.Vector3(x * scale, y * scale, z * scale));
 
-            if (points.length > 5000) {
+            if (points.length > 10000) { // Increase number of points for smoother curve
                 points.shift();
             }
 
             geometry.setFromPoints(points);
 
-            // Update color
             hue = (hue + 0.5) % 360;
             material.color.setHSL(hue / 360, 1, 0.5);
 
-            // Rotate the entire scene
             scene.rotation.x += 0.002;
             scene.rotation.y += 0.003;
 
@@ -121,6 +123,7 @@
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio); // Adjust for high DPI displays on resize
         }
 
         window.addEventListener('resize', onWindowResize, false);
