@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Gallery hover effects */
+        .gallery-item:hover .overlay {
+            opacity: 1 !important;
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+
+        .transition-opacity {
+            transition: opacity 0.3s ease;
+        }
+
+        /* Lightbox modal styling */
+        #lightboxModal .modal-content {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Gallery image styling */
+        .gallery-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Carousel thumbnail active state */
+        .carousel .img-thumbnail.active {
+            border-color: #0d6efd;
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Photo Gallery</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            APA sources available in "Image View" by clicking an image and on the "Complete Bibliography" page
+                        </p>
+                    </div>
+                </div>
+            </header>
+                
+           <!-- Gallery row -->
+            <div class="col-12">
+                <div class="text-center py-3">
+                    <h3 class="h5 mb-4">Photo Gallery</h3>
+                    <div class="row g-3" id="gallery-container">
+                        
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/Joan-Baez-Washington-August-28-1963.webp" 
+                                alt="Joan Baez performing “We Shall Overcome” at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="Belafonte_MoW.gif"
+                                data-bs-caption="Scherman, R. (Photographer). (1963). [Joan Baez performing “We Shall Overcome” at the March on Washington] [Photograph]. National Archives and Records Administration. In Encyclopædia Britannica. Retrieved December 6, 2025, from https://www.britannica.com/topic/We-Shall-Overcome#/media/1/1056901/334187">
+                            <p class="text-muted mt-2 small">(Scherman, 1963a)</p>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/Odetta_MoW.gif" 
+                                alt="Odetta singing at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="Odetta_MoW.gif"
+                                data-bs-caption="U.S. Information Agency. Press and Publications Service. (1963a, August 28). Civil Rights March on Washington, D.C. [Entertainment: Vocalist Odetta] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542020. https://catalog.archives.gov/id/542020">(U.S. Information Agency, 1963a)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/PeterPaulMary_MoW.gif" 
+                                alt="Peter, Paul and Mary singing at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="PeterPaulMary_MoW.gif"
+                                data-bs-caption="U.S. Information Agency. Press and Publications Service. (1963b, August 28). Civil Rights March on Washington, D.C. [Entertainment: Vocalists Peter, Paul, and Mary] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542019. https://catalog.archives.gov/id/542019">
+                            <p class="text-muted mt-2 small">(U.S. Information Agency, 1963b)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/BaezDylan_MoW.gif" 
+                                alt="Joan Baez and Bob Dylan singing at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="BaezDylan_MoW.gif"
+                                data-bs-caption="Scherman, R. (1963, August 28). Civil Rights March on Washington, D.C. [Entertainment: closeup view of vocalists Joan Baez and Bob Dylan] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542021. https://catalog.archives.gov/id/542021">
+                            <p class="text-muted mt-2 small">(Scherman, 1963b)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/FourSingers_MoW.gif" 
+                                alt="Four young marchers singing at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="FourSingers_MoW.gif"
+                                data-bs-caption="U.S. Information Agency. Press and Publications Service. (1963c, August 28). Civil Rights March on Washington, D.C. [Four young marchers singing] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542025. https://catalog.archives.gov/id/542025">(U.S. Information Agency, 1963c)</p>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/Guthrie_Portrait.png" 
+                                alt="Woody Guthrie playing guitar with 'This Machine Kills Fascists' sticker" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="Guthrie_Portrait.png"
+                                data-bs-caption="Aumuller, A. (1943, March 8). Woody Guthrie, half-length portrait, seated, facing front, playing a guitar that has a sticker attached reading: This Machine Kills Fascists [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Woody_Guthrie.jpg">
+                            <p class="text-muted mt-2 small">(Aumuller, 1943)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/Belafonte_MoW.gif" 
+                                alt="Sidney Poitier, Harry Belafonte, and Charlton Heston at the March on Washington" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="Belafonte_MoW.gif"
+                                data-bs-caption="Scherman, R. (1963, August 28). Civil Rights March on Washington, D.C. [Actors Sidney Poitier, Harry Belafonte, and Charlton Heston] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542061. https://catalog.archives.gov/id/542061">
+                            <p class="text-muted mt-2 small">(Scherman, 1963c)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <img src="../images/MLK_WeShallOvercome.jpg" 
+                                alt="Dr. Martin Luther King Jr. addressing a rally" 
+                                class="img-fluid rounded shadow gallery-image"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#imageModal"
+                                data-bs-src="MLK_WeShallOvercome.jpg"
+                                data-bs-caption="Raia, A. (Photographer). (1965, May 12). [Martin Luther King, Jr., speaking at a rally with a We Shall Overcome sign behind him] [Photograph]. Newsday LLC/Getty Images. In Encyclopædia Britannica. Retrieved December 6, 2025, from https://www.britannica.com/topic/We-Shall-Overcome#/media/1/1056901/334186"><p class="text-muted mt-2 small"></p>(Raia, 1965)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Add this Modal after the gallery section (before the Content Sections) -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Image View</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" alt="" class="img-fluid rounded">
+                        <p id="modalCaption" class="text-muted mt-3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>These photos provide a visual element to the connection of folk music and political movements.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>Many of these photos are from the March on Washington on August 28, 1963. Others include notable examples of folk music and political movements.</p>
+                            <p>
+                            This curated gallery visually anchors the fusion of folk music and political activism. The images serve not merely as documentation but as artifacts of collective humanity and visible resistance.  
+                            </p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Resistance</h5> 
+                            <p>Honing in on the March on Washington exemplifies the connection between folk music and protest.</p>
+
+                            <h5>Humanity</h5> 
+                            <p>There is a deep humanity that connects art with both protest and political commentary.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Gallery Walkabout
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                   <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>To begin, students will explore the provided photo gallery resource. Their first task is to select images that resonate with them based on a thematic prompt, such as: "Find pictures of music and protest that resonate with you."</p>
+
+                                <p>Next, we will create a collaborative gallery in the classroom. Incorporating the photos students have chosen, we will scatter the images on desks or tables. Students will then participate in a gallery walk, moving quietly to observe and reflect on the collection. Topical music can be played during this portion of the activity!</p>
+
+                                <p>Finally, this visual exploration will transition into a structured dialogue. Using discussion formats like <em>fishbowl</em>, students will analyze the images, share their interpretations, and explore the historical and emotional connections between music and social movements.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+
+                    <!-- Classroom Critical Analysis Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-search me-2"></i>Critical Analysis for Class Activity
+                        </h3>
+                        <div class="read-more-section" id="broadzines-analysis-section">
+                            <div id="broadzines-analysis-content">
+                                <h5>Windows and Mirrors</h5>
+                                <p>This activity serves as an opportunity for <strong>windows and mirrors</strong>. Students may see their own experiences or cultural identities reflected in the selected photos. Simultaneously, they gain insight into perspectives, eras, and movements different from their own.</p>
+                                <h5>Connecting Past and Present</h5>
+                                <p>The gallery walk fosters a direct visual dialogue between historical and contemporary events, particularly when students select modern-day photos. This deliberate juxtaposition makes the past tangible, framing today's movements as part of a enduring legacy of using music as a tool for social change.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-analysis-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // JavaScript to handle modal image and caption updates
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const imageSrc = '../images/' + button.getAttribute('data-bs-src'); // Add images/ path
+                const caption = button.getAttribute('data-bs-caption');
+                const altText = button.getAttribute('alt');
+                
+                modalImage.src = imageSrc;
+                modalImage.alt = altText;
+                modalCaption.textContent = caption;
+            });
+        });
+    </script>
+</body>
+</html>

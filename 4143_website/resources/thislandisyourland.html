@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Land Is Your Land | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">This Land Is Your Land</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            Kennedy Center. (n.d.). <em>This land is your land: The story behind the song.</em> Retrieved from <a href="https://www.kennedy-center.org/education/resources-for-educators/classroom-resources/media-and-interactives/media/music/story-behind-the-song/the-story-behind-the-song/this-land-is-your-land/">https://www.kennedy-center.org/education/resources-for-educators/classroom-resources/media-and-interactives/media/music/story-behind-the-song/the-story-behind-the-song/this-land-is-your-land/</a>
+                        </p>
+                        <p>
+                            Marrs, E. (1968, January). The rest of the song. Broadside, (88), 8-9. <a href="https://singout.org/downloads/broadside/b088.pdf">https://singout.org/downloads/broadside/b088.pdf/</a>
+                        </p>
+                        <p>
+                          Guthrie, W. (1951). This land is your land [Song]. On <em>Songs to Grow On: Nursery Days.</em> Folkways Records.  
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row -->
+                <div class="col-12">
+                    <div class="text-center py-3">
+                        <img src="../images/Guthrie_Portrait.png" 
+                            alt="*******" 
+                            class="rounded shadow" 
+                            style="max-height: 500px; width: auto; max-width: 100%;"
+                            id="source-image">
+                        <p class="text-muted mt-3 small" id="image-caption">
+                            <i class="fas fa-image me-1"></i>(Aumuller, 1943)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>The widely recognized song has a rich, interesting history.</p>
+                            
+                            <p>This allows students to reconsider two songs they may have taken for granted: "This Land Is Your Land" by Woody Guthrie and "God Bless America" by Irvine Berlin.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>Written in 1940 as a response to "God Bless America," which Guthrie couldn't get away from due to constant radio play.
+                            </p>
+                            
+                            <p>Guthrie felt the lyics to "God Bless America" were too patriotic and sappy, divorced from the tough reality many Americans experienced during the Great Depression.</p>
+
+                            <p>Originally written with an anti-capitalist bend with the lyrics: <br>
+                            <em>
+                                As I went walking I saw a sign there<br> 
+                                And on the sign it said “No Trespassing.”<br> 
+                                But on the other side it didn't say nothing,<br> 
+                                That side was made for you and me.<br>
+                                <br>
+                                In the shadow of the steeple I saw my people,<br> 
+                                By the relief office I seen my people;<br>
+                                As they stood there hungry, I stood there asking<br>
+                                Is this land made for you and me?<br>
+                            </em>
+                            (Kennedy Center, n.d.)
+                            </p>
+
+                            <p>He dropped those lyrics at some point, but the final version still resonates with the listener.</p>
+
+                            <p>Official lyrics posted in the article:
+                            <em>
+                                <br>This land is your land, this land is my land <br>
+                                From California to the New York island; 
+                                From the red wood forest to the Gulf Stream waters <br>
+                                This land was made for you and me. <br>
+                                <br>
+                                As I was walking that ribbon of highway, <br>
+                                I saw above me that endless skyway: <br>
+                                I saw below me that golden valley: <br>
+                                This land was made for you and me. <br>
+                                <br>
+                                I've roamed and rambled and I followed my footsteps <br>
+                                To the sparkling sands of her diamond deserts; <br>
+                                And all around me a voice was sounding: <br>
+                                This land was made for you and me. <br>
+                                <br>
+                                When the sun came shining, and I was strolling, <br>
+                                And the wheat fields waving and the dust clouds rolling, <br>
+                                As the fog was lifting a voice was chanting: <br>
+                                This land was made for you and me. <br>
+                                <br>
+                                As I went walking I saw a sign there <br>
+                                And on the sign it said "No Trespassing." <br>
+                                But on the other side it didn't say nothing, <br>
+                                That side was made for you and me. <br>
+                                <br>
+                                In the squares of the city, in the shadow of the steeple, <br>
+                                By the relief office I seen my people; <br>
+                                As they stood there hungry, I stood there asking <br>
+                                Is this land made for you and me? <br>
+                                <br>
+                                Nobody living can ever stop me, <br>
+                                As I go walking that freedom highway; <br>
+                                Nobody living can ever make me turn back <br>
+                                This land was made for you and me.
+                            <br>
+                            </em>
+                            (Kennedy Center, n.d.)
+                            </p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Idealization</h5>
+                            <p>The song directly responds to and challenges the sentimental, shallow patriotism of "God Bless America," which ignored the harsh realities many Americans experienced during the Great Depression.</p>
+                            <h5>Resistance</h5>
+                            <p>The omitted verses explicitly critique capitalism and private property. Even without them, the song's framing of land as a collective right questions exclusive ownership and inequality.</p>
+                            <h5>What does it mean to be American?</h5>
+                            <p>The song poses a fundamental question: What does it mean to belong here? Guthrie shifts the focus from a nation "blessed by God" (passive, top-down) to a land "made for you and me" (inclusive, bottom up).</p>
+                            <h5>Reclaiming/Reframing</h5>
+                            <p>Guthrie's work is a deliberate effort to reclaim the concept of America from a commercial, patriotic mainstream.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Art Time!
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>There is a strong visual element to "This Land Is Your Land" (Guthrie, 1951).</p>
+                                <p>Students listen to the song and read the lyrics. They then do art, probably drawing or painting, of the visuals the song inspires in them.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

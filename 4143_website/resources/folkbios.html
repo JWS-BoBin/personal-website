@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folk Bios | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Folk Bios</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            Dicaire, D. (2010). <em>The early years of folk music.</em> McFarland & Company. 
+                        </p>
+                        <p>
+                            Dicaire, D. (2011). <em>The folk music revival, 1958-1970.</em> McFarland & Company.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row - Two Pictures -->
+                <div class="col-12">
+                    <div class="d-flex flex-nowrap align-items-center justify-content-center py-3 overflow-auto">
+                        <!-- Container for both images with horizontal scrolling on very small screens -->
+                        <div class="d-flex flex-row gap-3" style="min-width: min-content;">
+                            <!-- First Image -->
+                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
+                                <img src="../images/TheEarlyYearsOfFolkMusic.webp" 
+                                    alt="Description of first image" 
+                                    class="img-fluid rounded shadow"
+                                    style="max-height: 500px; width: 100%; object-fit: cover;"
+                                    id="source-image-1">
+                                
+                            </div>
+                            
+                            <!-- Second Image -->
+                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
+                                <img src="../images/TheFolkMusicRevival.webp" 
+                                    alt="Description of second image" 
+                                    class="img-fluid rounded shadow"
+                                    style="max-height: 500px; width: 100%; object-fit: cover;"
+                                    id="source-image-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>Dave Dicaire's books, <em>The early years of folk music</em> and <em>The folk music revival, 1958-1970</em>, provide wonderful short profiles on many folk musicians and other notable figures in folk music revival. Well-researched, this offers a great way to diversify and widen the range of artists discussed in the study of folk music.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>These thorough references by music enthusiast David Dicaire profile numerous folk musicians from various backgrounds and eras. A notable strength is the inclusion of international folk singers, expanding the scope beyond America.
+                            
+                            <p>Examples of profiles:</p>
+
+                            <!-- Bootstrap-compliant image grid -->
+                            <div class="row mt-3">
+                                <div class="col-md-6 mb-3">
+                                    <img src="../images/FolkAroundTheWorld.png" 
+                                        class="img-fluid rounded shadow-sm" 
+                                        alt="Book cover: Folk Around the World by David Dicaire">
+                                        <p class="text-muted mt-2 small">(Dicaire, 2010)</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <img src="../images/ThePoliticalFolk.png" 
+                                        class="img-fluid rounded shadow-sm" 
+                                        alt="Book cover: The Political Folk by David Dicaire">
+                                        <p class="text-muted mt-2 small">(Dicaire, 2011)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Windows and Mirrors</h5> 
+                            <p>Allows students to read about a wide range of folk musicians, many of which come from different backgrounds, some of which can come from their own unique backgrounds.</p>
+
+                            <h5>Omitted Stories</h5> 
+                            <p>The books bring to the fore many singers that may not be known to a wider audience, allowing these artists to reclaim their position in the history of folk and culture.</p>                
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Jigsaw
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>Small groups will be given bios of various folk artisits from the Dicaire (2010, 2011) books.</p>
+                                <p>They will then get into groups to discuss their subjects.</p>
+                                <p>They will then jigsaw, so that everyone has the opportunity to share their subject with members of every other group.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

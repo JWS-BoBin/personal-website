@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woody Guthrie | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Behind The Bastards: Woody Guthrie</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            <b>Part One (YouTube version)</b>
+                            <br>
+                            Evans, R. (Host). (2024, December 24). <em>Part one: How Woody Guthrie turned folk music into a weapon</em> [Video]. YouTube. <a href="https://youtu.be/O9pacE4try0?si=foBoxvBkF5NYkq5Z">https://youtu.be/O9pacE4try0?si=foBoxvBkF5NYkq5Z</a>
+                        </p>
+                        <p>
+                            <b>Part Two (YouTube version)</b>
+                            <br>
+                            Evans, R. (Host). (2024, December 26). <em>Part two: How Woody Guthrie turned folk music into a weapon</em> [Video]. YouTube. <a href="https://youtu.be/71M3GCvAX7w?si=QsiTTkqu7tLBJWmL">https://youtu.be/71M3GCvAX7w?si=QsiTTkqu7tLBJWmL</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row - Two Pictures -->
+                <div class="col-12">
+                    <div class="d-flex flex-nowrap align-items-center justify-content-center py-3 overflow-auto">
+                        <!-- Container for both images with horizontal scrolling on very small screens -->
+                        <div class="d-flex flex-row gap-3" style="min-width: min-content;">
+                            <!-- First Image -->
+                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
+                                <img src="../images/btb_guthrie_1.png" 
+                                    alt="Description of first image" 
+                                    class="img-fluid rounded shadow"
+                                    style="max-height: 300px; width: 100%; object-fit: cover;"
+                                    id="source-image-1">
+                            </div>
+                            
+                            <!-- Second Image -->
+                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
+                                <img src="../images/btb_guthrie_2.png" 
+                                    alt="Description of second image" 
+                                    class="img-fluid rounded shadow"
+                                    style="max-height: 300px; width: 100%; object-fit: cover;"
+                                    id="source-image-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p><em>Note: This is part of their annual non-bastard series</em></p>
+                            
+                            <p>This multi-part podcast series hosted by Robert Evans, <em>How Woody Guthrie Turned Folk Music into a Weapon</em>, explores Guthrie's life through various historical sources and perspectives.</p>
+            
+                            <p>This podcast has a distinct political bent, which sits comfortably in the counter-narrative sub-genre of historical podcasts. It offers a critical perspective on Guthrie's life, music, and political activism.</p>
+
+                            <p>Guthrie is arguably the most important figure in the first half of the folk music revival, and this source provides valuable insight into how his music was shaped by and contributed to social movements of his time.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                             <p>Woody Guthrie was born in Oklahoma in 1912. Between Oklahoma and Texas, Guthrie had a difficult childhood, marked by family tragedy, abuse, and instability. His experiences as a Dust Bowl migrant and working-class advocate during the Great Depression deeply informed his music, leading him to write up to a thousand songs, which he famously refused to tightly copyright.</p>
+                             
+                             <p>Guthrie's life was one of continual personal growth and political engagement. Though he participated in activities he later regretted, like minstrel shows and faith healing, he evolved into a staunch anti-racist and collaborator with Black musicians. He claimed communist sympathies, served in the Merchant Marine during WWII. His most famous song is "This Land Is Your Land."</p>
+                             
+                             <p>In the late 1940s, Guthrie began showing symptoms of Huntington's disease, which led to his institutionalization from 1956 until his death in 1967. Though he never achieved great financial success, he became an immensely influential figure within the folk music community, leaving a legacy of artistic integrity and social justice.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Power & Resistance</h5>
+                            
+                            <p>Woody Guthrie was a persistent critic of established political and economic power structures. His music and life explicitly championed the working class and the dispossessed, resisting the narratives of the powerful through anthems of solidarity and protest during the Great Depression and beyond.
+                            </p>
+                            
+                            <h5>Heroification</h5> 
+                            <p>While Guthrie is rightly admired as a folk hero and a voice for justice, his legacy is complicated by personal flaws and early actions he later regretted. A full understanding of his life requires acknowledging this complex humanity, ensuring our admiration is for the real, evolving person rather than a simplified myth.</p>
+                            
+                            <h5>What does it mean to be American?</h5> 
+                            <p>Guthrie was constantly writing songs that beg the question. Through it he also questioned the <em>idealization and normalization</em> that was pushed onto the American people by the powers that be.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Woody Guthrie Discussion
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>This lesson plan uses the teacher knowledge from the <em>BTB</em> podcast series on Woody Guthrie, combined with the content of <em>Broadside Magazine</em> Issue 16 (1962).</p>
+
+                                <p>Inspired by the curriculum exploration, students are placed into small groups. Each group is assigned one page (excluding page 1) from the 7-page <em>Broadside</em> issue. This particular issue focuses on songs and writings about James Meredith--a Black man engaged in a historic legal battle to desegregate the University of Mississippi. (Meredith's life story is fascinating and could easily be its own "Doing Social Studies" topic!)</p>
+
+                                <p>This segues into a discussion, beginning with the Woody Guthrie song featured on page 1 of the issue. After analyzing the song's lyrics and context, the lesson expands to explore Guthrie's dual legacy:</p>
+
+                                <ul>
+                                    <li>His foundational role in the Folk Music Revival.</li>
+                                    <li>His early, flawed actions, such as performing in blackface.</li>
+                                </ul>
+
+                                <p>This leads to a critical conversation about  "heroification," recognizing even admirable historical figures are complex. The key takeaway is Guthrie's personal growth. He matured from this bigoted mindset, later forming friendships and touring with Black musicians.</p>
+
+                                <p>His story serves two purposes: it complicates a simplistic heroic narrative often told of Guthrie while demonstrating the capacity for personal growth and redemption.</p>
+
+                                <p>This theme can be further connected to <cite>Odetta: A Life in Music and Protest</cite> (Zack, 2020), which notes that Odetta performed at Guthrie's memorial service.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

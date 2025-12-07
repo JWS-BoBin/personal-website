@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Shall Overcome | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">We Shall Overcome</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            <p>
+                            Matthias, M. (2025, April 17). <em>We shall overcome.</em> Encyclopædia Britannica. Retrieved December 6, 2025, from <a href="https://www.britannica.com/topic/We-Shall-Overcome">https://www.britannica.com/topic/We-Shall-Overcome</a>
+                        </p>
+                        <p>
+                            Stewart, K. (2014, February 6). Tracing the long journey of &ldquo;We Shall Overcome.&rdquo; <em>Library of Congress Blogs: Folklife Today</em>. <a href="https://blogs.loc.gov/folklife/2014/02/tracing-the-long-journey-of-we-shall-overcome/">https://blogs.loc.gov/folklife/2014/02/tracing-the-long-journey-of-we-shall-overcome/</a>
+                        </p>
+                        <p>
+                            Graham, D. A. (2016, April 14). Who owns 'We Shall Overcome'? <em>The Atlantic</em>. <a href="https://www.theatlantic.com/entertainment/archive/2016/04/we-shall-overcome-lawsuit/478068/">https://www.theatlantic.com/entertainment/archive/2016/04/we-shall-overcome-lawsuit/478068/</a>
+                        </p>
+                        <p>
+                            Seeger, P. (1963). We shall overcome [Song]. On <em>We Shall Overcome.</em> Folkways Records.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row -->
+                <div class="col-12">
+                    <div class="text-center py-3">
+                        <img src="../images/WeShallOvercome_CivilRights.jpg" 
+                            alt="*******" 
+                            class="rounded shadow" 
+                            style="max-height: 500px; width: auto; max-width: 100%;"
+                            id="source-image">
+                        <p class="text-muted mt-3 small" id="image-caption">
+                            <i class="fas fa-image me-1"></i>(Raia, 1965)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">                            
+                            <p>One of the most recognized songs during the Civil Rights movement, "We Shall Overcome" has a rich history with an interesting twist.</p>
+                            <p>The song fits into quite a few themes from class.</p>
+                            <p>The first source, from the Library of Congress, provides a wonderful historical overview, with the source from the Atlantic adding a coda that is relevant to class.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>"We Shall Overcome" is rooted in I'll Overcome Some Day and I'll be All Right, both rooted in African American culture.</p>
+                            <p>Interviews were also recorded with Pete Seeger and Jamila Jones. Copyright was made by Pete Seeger, Guy Carawan and Frank Hamilton. In 1956 at age 12, Jamila Jones added a new verse to "We Shall Overcome."</p>
+                            <p>After Kate Stewart published her article in 2014, it was discovered that a woman by the name of Louise Shropshire wrote a hymn called "If My Jesus Wills" which was claimed to be direct inspiration for "We Shall Overcome".</p>
+                            <p>The copyright to "We Shall Overcome" was challenged in court and voluntarily relinquished by its publishers in 2018 after historical evidence, including Shropshire's hymn, demonstrated the song's status as a traditional folk work in the public domain.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Heroification</h5> 
+                            <p>Pete Seeger is rightly upheld as a pillar of integrity and solidarity. Yet even our heroes of any movement are not perfect, complicated by flaws and controversies, such as the disputes surrounding the copyright and attribution for "We Shall Overcome."</p>
+                            
+                            <h5>Power</h5> 
+                            <p>The transformative power of song is central, as "We Shall Overcome" was powerfully embraced by the Civil Rights Movement, demonstrating how music can fuel and sustain social change.</p>
+                            
+                            <h5>Resistance</h5> 
+                            <p>The song was inherently created and adopted as an anthem of protest, a direct musical tool for challenging injustice and asserting collective strength.</p>
+
+                            <h5>Solidarity</h5> 
+                            <p>Music like "We Shall Overcome" plays a crucial role in building solidarity, helping to unify diverse individuals within a movement around a shared identity and common purpose.</p>
+
+                            <h5>Humanity</h5> 
+                            <p>The emphatic "We" in "We Shall Overcome" underscores a fundamental theme: that humanity is not a solitary experience but an interconnected community facing struggles together.</p>
+
+                            <h5>What Does It Mean to Be American?</h5> 
+                            <p>The song raises core American questions: Who is the "we" that shall overcome? What systemic obstacles must they overcome? And what does their struggle reveal about the nation's ideals and realities?</p>
+                            
+                            <h5>Erasure</h5> 
+                            <p>While often unintentional, a notable erasure occurred in the historical narrative of "We Shall Overcome," where a key contributor, Louise Shropshire, was overlooked for decades.</p>
+                            
+                            <h5>Reframing/Reclaiming</h5> 
+                            <p>Recent historical revelations about the song's origins have allowed for a reframing of its story, reclaiming the credit and recognition.</p>
+
+                            <h5>Omitted Voices/Stories/Perspectives</h5> 
+                            <p>The erasure of certain creators points to the broader omission of vital voices and perspectives in popular history, a gap that reclaiming efforts seek to address.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Silent Conversation
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                   <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>Since the "We Shall Overcome" resource has many videos within the various references, as well as plenty of shorter readings on the various aspects and history of the song, students have the ability to intellectually roam around.</p>
+                                <p>Creating pods, students go from one pod to another, which has a resouce--either a video playing on a laptop, a short reading or photos--as well as a blank piece of paper for them to write down their thoughts.</p>
+                                <p>After a given amount of time, the students move on to another pod, absorb the material and write down their thoughts.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+
+                    <!-- Classroom Critical Analysis Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-search me-2"></i>Critical Analysis for Class Activity
+                        </h3>
+                        <div class="read-more-section" id="broadzines-analysis-section">
+                            <div id="broadzines-analysis-content">
+                                <h5>Omitted voices/stories/perspectives</h5>
+                                <p>Part of the inspiration for this is that Louise Shropshire did not receive proper credit for her contribution to the song. Having the students participate via silent conversation will hopefull connect some dots.</p>
+                                <h5>Dramatization</h5>
+                                <p>We should consider if this is dramatization. I would say no, as this connection will not be explicitly made. Perhaps students will notice during a debrief. However, since silent conversation is an establsiehd classroom activity, I would not consider it a gimmick here.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-analysis-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

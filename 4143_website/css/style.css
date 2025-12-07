@@ -1,0 +1,495 @@
+/* 
+ * Folk Music Revival Project - Custom Styles
+ * Designed to complement Bootstrap 5
+ */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    /* Color Palette - Folk/Acoustic Theme */
+    --primary-dark: #2c5530;    /* Forest green */
+    --primary-light: #8a9a5b;   /* Sage green */
+    --accent-warm: #c46d5e;     /* Terra cotta */
+    --accent-gold: lab(70.97% 11.04 32.5);     /* Warm gold */
+    --neutral-light: lab(95.18% -0.54 5.77);   /* Cream */
+    --neutral-dark: #3a3a3a;    /* Charcoal */
+    --neutral-medium: #6c757d;  /* Bootstrap secondary */
+    
+    /* Typography */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Open Sans', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+}
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure content pushes footer down */
+main {
+    flex: 1;
+}
+
+/* ===== TYPOGRAPHY OVERRIDES ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--accent-gold);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-light);
+    padding-top: var(--spacing-sm);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--accent-warm);
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--neutral-medium);
+}
+
+/* ===== NAVBAR CUSTOMIZATION ===== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-dark), #1e4023) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--accent-gold) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand:hover {
+    color: #e6c7a1 !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold) !important;
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    background-color: var(--neutral-light);
+    border: 1px solid var(--primary-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: var(--neutral-dark);
+    padding: 0.7rem 1.2rem;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(138, 154, 91, 0.1);
+    color: var(--primary-dark);
+    border-left: 3px solid var(--accent-warm);
+    padding-left: 1.5rem;
+}
+
+.dropdown-divider {
+    border-color: var(--primary-light);
+    opacity: 0.5;
+}
+
+/* ===== CONTAINER CUSTOMIZATION ===== */
+.container {
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+}
+
+/* Custom section styling */
+.section-card {
+    background: white;
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--accent-warm);
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== SOURCES PAGE STYLING ===== */
+.source-item {
+    background: white;
+    border-left: 5px solid var(--primary-light);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+.source-item:hover {
+    border-left-color: var(--accent-warm);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.source-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.source-meta {
+    color: var(--neutral-medium);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* ===== CLASSROOM IDEAS PAGE ===== */
+.classroom-idea {
+    background: linear-gradient(135deg, white, #faf8f2);
+    border: 2px dashed var(--accent-gold);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.classroom-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: var(--accent-warm);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== IMAGE/PHOTO GALLERY ===== */
+.folk-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.folk-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.folk-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    padding: 1rem;
+    background: white;
+    font-style: italic;
+    color: var(--neutral-medium);
+    border-top: 1px solid #eee;
+}
+
+/* ===== PLAYLIST STYLING ===== */
+.playlist-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-left: 4px solid var(--primary-light);
+}
+
+.playlist-number {
+    background: var(--primary-dark);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ===== FOOTER STYLING ===== */
+.site-footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: var(--spacing-md) 0;
+    margin-top: auto;
+}
+
+.site-footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-folk {
+    color: var(--primary-dark);
+}
+
+.bg-folk-light {
+    background-color: rgba(138, 154, 91, 0.1);
+}
+
+.quote-block {
+    border-left: 4px solid var(--accent-gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--neutral-dark);
+    font-size: 1.1rem;
+}
+
+.highlight {
+    background-color: rgba(212, 165, 116, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Read More Text Indicator */
+.read-more-indicator {
+    font-size: 0.85rem;
+    color: var(--primary-light);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Transition for smooth expansion */
+.read-more-content {
+    transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .playlist-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .classroom-idea {
+        padding: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, .site-footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+/* ===== READ MORE/COLLAPSE STYLES ===== */
+.read-more-section {
+    position: relative;
+    max-height: 150px; /* Show about 3-4 lines of text */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.read-more-section.expanded {
+    max-height: 2000px; /* Large enough to show all content */
+}
+
+.read-more-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--neutral-light) 90%);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.read-more-section.expanded .read-more-fade {
+    opacity: 0;
+}
+
+.read-more-btn {
+    background: none;
+    border: 2px solid var(--primary-light);
+    color: var(--primary-dark);
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    background-color: rgba(138, 154, 91, 0.1);
+    font-family: var(--font-body);
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-light);
+    color: white;
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(44, 85, 48, 0.2);
+    text-decoration: none;
+}
+
+.read-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(44, 85, 48, 0.2);
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.read-more-btn.expanded i {
+    transform: rotate(180deg);
+}
+
+/* Read more button inside cards */
+.section-card .read-more-btn {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Read more in source items */
+.source-item .read-more-btn {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+}
+
+/* Alternative style for accent-colored read more */
+.read-more-btn.accent-style {
+    border-color: var(--accent-warm);
+    background-color: rgba(196, 109, 94, 0.1);
+    color: var(--accent-warm);
+}
+
+.read-more-btn.accent-style:hover {
+    background-color: var(--accent-warm);
+    color: white;
+    border-color: var(--accent-warm);
+    box-shadow: 0 4px 8px rgba(196, 109, 94, 0.2);
+}
+
+/* Minimal style for subtle look */
+.read-more-btn.minimal-style {
+    border: none;
+    background: none;
+    color: var(--primary-dark);
+    padding-left: 0;
+    font-weight: 600;
+}
+
+.read-more-btn.minimal-style:hover {
+    background: none;
+    color: var(--primary-light);
+    transform: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+/* Read more section in dark backgrounds */
+.bg-folk-light .read-more-fade {
+    background: linear-gradient(to bottom, transparent, rgba(245, 241, 230, 0.95));
+}
+
+.section-card .read-more-fade {
+    background: linear-gradient(to bottom, transparent, white);
+}

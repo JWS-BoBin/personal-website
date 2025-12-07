@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Playlist</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                        <p>
+                            Schimmer, J. (n.d.). <em>Folk Music Revival</em> [Spotify playlist]. Spotify. Retrieved from https://open.spotify.com/playlist/3ofsb1cZp22w31JUzUeqav
+                        </p>
+                    </div>
+                </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Playlist Loading Indicator -->
+                <div id="playlist-loading" class="text-center bg-dark rounded p-5 mb-4" style="min-height: 420px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="spinner-border text-success mb-3" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h4 class="text-white mb-2">Loading Playlist</h4>
+                    <p class="text-light mb-4">Fetching music from Spotify...</p>
+                </div>
+
+                <!-- Spotify iframe -->
+                <iframe data-testid="embed-iframe" style="border-radius:12px; opacity: 0; transition: opacity 0.5s ease;" 
+                        src="https://open.spotify.com/embed/playlist/3ofsb1cZp22w31JUzUeqav?utm_source=generator&theme=0" 
+                        width="100%" height="500" frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        onload="hideSpotifyLoading()"
+                        id="spotify-iframe">
+                </iframe>
+                <br>
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">                            
+                            <p>If we're going to talk about music, let's have a playlist!</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>A playlist of (mostly) folk music that is (mostly) politically inclined and (mostly) from the 1940s through the 1960s. Mostly.</p>
+                            <p>All kidding aside, this playlist is intended to be accommodating and evolving. I will cite specific songs used in other resources, but given the breadth of possible songs, I have chosen to cite the entire Spotify playlist here.</p>
+                            <p>Songs can be added as appropriate for a given class, especially for windows and mirrors.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <p>The beauty of the playlist is that you can find a song for any theme we've discussed in class. That being said, here are a few 'meta' considerations.</p>
+                            
+                            <h5>Omitted voices/stories/perspectives</h5>
+                            <p>This playlist currently centers American artists and songs. If students come from cultures with different folk song lineage, they should be added.</p>
+
+                            <h5>Windows and Mirrors</h5>
+                            <p>This provides an opportunity to allow students to find folk from their families' cultures as well as see the American folk tradition.</p>
+
+                            <h5>Link from past to present</h5>
+                            <p>Adding contemporary songs should always be welcome.</p>
+
+                            <h5>Solidarity</h5>
+                            <p>Folk music built collective identity around shared struggles. Singing together at rallies or picket lines was an act of unity.</p>
+
+                            <h5>Power</h5>
+                            <p>The playlist showcases music as a tool of cultural power. It gave a voice to the marginalized, challenged dominant narratives, and mobilized public opinion around social and political issues.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Hootenanny
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                   <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>A hootenanny is a fun, fairly informal musical event connected to folk music.</p>
+                                <p>This can be treated as part talent show, part dance, part sing-along. To prepare, the class selects a shortlist of folk songs. A "request board" can gather song ideas. A collection of  instruments, if available, should be included (tambourines, shakers, etc). An optional, low-pressure sign-up sheet allows students to volunteer for special roles, like performing a short verse, leading a dance, or performing a talent.</p>
+                                <p>The hootenanny itself flows through communal activities, which could include: sing-alongs, a supportive "talent sprouts" segment for brief student performances, and an active folk dance or parade. The goal is to create a living memory of music made by and for the community, perfectly embodying the spirit of folk music.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+
+                    <!-- Classroom Critical Analysis Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-search me-2"></i>Critical Analysis for Class Activity
+                        </h3>
+                        <div class="read-more-section" id="broadzines-analysis-section">
+                            <div id="broadzines-analysis-content">
+                                <h5>Joy as Resistance</h5>
+                                <p>Much like traditional hootenannies, this is a joyous event. However, making sure to include the ethos of folk--helping one another, acknowledging the troubles in the world--should be incorporated.</p>
+                                <h5>Dramatization</h5>
+                                <p>Class parties are fairly common, so incorporating elements from a folk music unit is acceptable. Mind should be taken into what songs, activities and talents are ultimately chosen.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-analysis-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        function hideSpotifyLoading() {
+            const loadingEl = document.getElementById('playlist-loading');
+            const iframe = document.getElementById('spotify-iframe');
+            
+            if (loadingEl) {
+                loadingEl.style.display = 'none';
+            }
+            
+            if (iframe) {
+                iframe.style.opacity = '1';
+                iframe.style.display = 'block';
+            }
+        }
+
+        // Fallback: hide loading indicator after 10 seconds max
+        setTimeout(() => {
+            const loadingEl = document.getElementById('playlist-loading');
+            if (loadingEl && loadingEl.style.display !== 'none') {
+                hideSpotifyLoading();
+            }
+        }, 10000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Blues | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Talking Blues</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            Leggett, S. (n.d.). <em>Chris Bouchillon biography.</em> AllMusic. Retrieved from <a href="https://www.allmusic.com/artist/chris-bouchillon-mn0001180625">https://www.allmusic.com/artist/chris-bouchillon-mn0001180625</a>
+                        </p>
+                        <p id="apa-reference">
+                            Wikipedia contributors. (n.d.). Talking blues. In Wikipedia. Retrieved December 4, 2025, from <a href="https://en.wikipedia.org/wiki/Talking_blues">https://en.wikipedia.org/wiki/Talking_blues</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row -->
+                <div class="col-12">
+                    <div class="text-center py-3">
+                        <img src="../images/ChrisBouchillon.jpg" 
+                            alt="*******" 
+                            class="rounded shadow" 
+                            style="max-height: 500px; width: auto; max-width: 100%;"
+                            id="source-image">
+                        <p class="text-muted mt-3 small" id="image-caption">
+                            <i class="fas fa-image me-1"></i> An image of Bouchillon ([The Original Talking Blues Man], n.d.)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>A defining tradition of folk music is its malleability. Songs are not fixed artifacts but living pieces passed down and reshaped by various artists over time, each adapting the sound and lyrics. The "Talking Blues" exemplifies this tradition.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>The original, "Talking Blues," was composed by blues and country musician Chris Bouchillon, who had a signature 'talking' style and a comedic bend.</p>
+                            
+                            <p>This was adapted into the folk version by Woody Guthrie and used by many other folk artists, including:</p>
+
+                            <p>
+                                "Talking Dust Bowl Blues" by Woody Guthrie.<br>
+                                "Talking Centralia" by Woody Guthrie.<br>
+                                "Talking Union," by Pete Seeger, Lee Hays, and Millard Lampell<br>
+                                "Atomic Talking Blues" by Vern Partlow<br>
+                                "Talking Inflation Blues" by Tom Glazer<br>
+                                "Talking World War III Blues" by Bob Dylan<br>
+                                "Talkin' John Birch Paranoid Blues" by Bob Dylan<br>
+                                "Talking Birmingham Jam" by Phil Ochs.<br>
+                                "Talking Cuban Crisis" by Phil Ochs.<br>
+                                "Talking Vietnam" by Phil Ochs.<br> 
+                            </p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            
+
+                            <h5>Joy as Resistance</h5> 
+                            <p>The "talking blues" style is fundamentally funny. By using comedy and a half-spoken, rhythmic delivery, artists transform serious topics into engaging performance. This joy is not an escape but a strategic act of resistance, asserting that critique can be delivered with a wry smile.</p>
+
+
+                            <h5>Resistance</h5>
+                            <p>Resistance is at the core of the talking blues, in its folk form. Many of these songs challenge the dominant political, economic, and social narratives. 
+
+
+                            <h5>Power</h5>
+                            <p>The talking blues explicitly critiques concentrated power in corporations, media, and government; and gives a voice to marginalized perspectives>.</p>
+
+
+                            <h5>Humanity</h5>
+                            <p>Humor is a deeply human thing. By connecting it to political critique, it reaches people to the soul.</p>
+
+
+                            <h5>Idealization</h5>
+                            <p>The talking blues is a direct challenge to an idealized version of America.
+
+                            <h5>Solidarity</h5>
+                            <p>By articulating common struggles in a shared, accessible vernacular, the talking blues is a potent force for building solidarity. An great example is "Talking Union," a union song fostering solidarity as a social and political force.</p>
+
+                            <h5>Assimilation</h5>
+                            <p>The accessible micro-genre has been used by many artists beyond folk. A notable example is "Singing in Viet Nam Talking Blues" by Johnny Cash.</p>
+
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Lyric Analysis
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                            <p>A variation on the "Save the Last Word" activity, this allows students to analyze lyrics to not only understand what the songs are about but also how they're valuable to political movements.</p>
+
+                            <p>Talking Blues is a great paired resource, because many of these songs are overtly political.</p>
+
+                            <p>If the technology is available, the students can also listen to a given song while reading the lyrics to fully appreciate the piece of work.</p>
+
+                            <p>Students at a table select lyrics that interest them, perhaps for their commentary, prehaps for other reasons. They discuss with their group, then the groups share with the class.</p>
+
+                            <p><b>Example:<br><br>
+                            <!-- Spotify Embed Added Here -->
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0eZoEIFWMNTt3BVejJdUH7?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <br>
+                            <br>
+                            </b>Talkin Dust Bowl Blues by Woody Guthrie (1940/1964):</p>
+
+                            <p><em>
+                                Back in Nineteen Twenty-Seven,<br>
+                                I had a little farm and I called that heaven.<br>
+                                Well, the prices up and the rain come down,<br>
+                                And I hauled my crops all into town --<br>
+                                I got the money, bought clothes and groceries,<br>
+                                Fed the kids, and raised a family.<br>
+                                <br>
+                                Rain quit and the wind got high,<br>
+                                And the black ol' dust storm filled the sky.<br>
+                                And I swapped my farm for a Ford machine,<br>
+                                And I poured it full of this gas-i-line --<br>
+                                And I started, rockin' an' a-rollin',<br>
+                                Over the mountains, out towards the old Peach Bowl.<br>
+                                <br>
+                                Way up yonder on a mountain road,<br>
+                                I had a hot motor and a heavy load,<br>
+                                I's a-goin' pretty fast, there wasn't even stoppin',<br>
+                                A-bouncin' up and down, like popcorn poppin' --<br>
+                                Had a breakdown, sort of a nervous bustdown of some kind,<br>
+                                There was a feller there, a mechanic feller,<br>
+                                Said it was en-gine trouble.<br>
+
+                                Way up yonder on a mountain curve,<br>
+                                It's way up yonder in the piney wood,<br>
+                                An' I give that rollin' Ford a shove,<br>
+                                An' I's a-gonna coast as far as I could --<br>
+                                Commence coastin', pickin' up speed,<br>
+                                Was a hairpin turn, I didn't make it.<br>
+                                <br>
+                                Man alive, I'm a-tellin' you,<br>
+                                The fiddles and the guitars really flew.<br>
+                                That Ford took off like a flying squirrel<br>
+                                An' it flew halfway around the world --<br>
+                                Scattered wives and childrens<br>
+                                All over the side of that mountain.<br>
+                                <br>
+                                We got out to the West Coast broke,<br>
+                                So dad-gum hungry I thought I'd croak,<br>
+                                An' I bummed up a spud or two,<br>
+                                An' my wife fixed up a tater stew --<br>
+                                We poured the kids full of it,<br>
+                                Mighty thin stew, though,<br>
+                                You could read a magazine right through it.<br>
+                                Always have figured<br>
+                                That if it'd been just a little bit thinner,<br>
+                                Some of these here politicians<br>
+                                Coulda seen through it.<br>
+                            </em></p>
+                            <br>
+                            
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

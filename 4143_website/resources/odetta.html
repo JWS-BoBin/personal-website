@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odetta | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Odetta: A Life in Music and Protest</h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            Zack, I. (2020). <em>Odetta: A life in music and protest.</em> Beacon Press.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row -->
+                <div class="col-12">
+                    <div class="text-center py-3">
+                        <img src="../images/odetta_alifeinmusicandprotest.jpg" 
+                            alt="Odetta: A Life in Music and Protest" 
+                            class="rounded shadow" 
+                            style="max-height: 500px; width: auto; max-width: 100%;"
+                            id="source-image">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>Ian Zack's biography, <em>Odetta: A Life in Music and Protest</em>, provides a look into the folk music revival through the lens of a seminal yet often overlooked figure: Odetta Holmes.</p>
+                            
+                            <p>The book details Odetta's intersections with major icons of the era, including Bob Dylan, Joan Baez, and Harry Belafonte. While she profoundly influenced these artists, Odetta never achieved the same level of mainstream commercial success as Dylan, Baez, Belafonte, or groups like Peter, Paul and Mary.</p>
+
+                            <p>For an educator, this biography offers a solid foundation for understanding the folk revival scene while deliberately centering a pivotal, but oft overlooked, artist whose legacy as a musical and political force is crucial to the movement's full story.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>Odetta Holmes was born in Birmingham, Alabama in 1930, and her childhood was shaped by the Great Depression and the racism of the Jim Crow South. Moving to Los Angeles in 1937, she was deeply affected by the racism in school textbooks, later saying her true education came through folk music. Recognized for her powerful voice from a young age, she found her calling in the folk scenes of San Francisco and later New York.</p>
+                            
+                            <p>Her physical presence was as distinctive as her sound. Standing nearly six feet tall with a notable afro she refused to straighten, she was self-conscious yet defiantly visible. She would often perform with her eyes closed. She was managed by Albert Grossman (who managed many major folk figures). For a long time, she preferred to let her music do the talking, a principle that earned criticism, but also empathy from other Black performers. Some of the most famous from her repertoire included "Take This Hammer" and the "Freedom Trilogy." A friend to Nina Simone and collaborator with Harry Belafonte, Odetta was a pillar at the intersection of music and civil rights, consciously performing in non-segregated venues and famously singing at the 1965 March on Washington. Martin Luther King called her "The Voice of the Civil Rights Movement."</p>
+
+                            <p>Despite her profound influence, Odetta never achieved the mainstream commercial success of contemporaries like Bob Dylan or Joan Baez. Financial strains, partly from a failed marriage, persisted. In later decades, she became more overtly active in political movements and explored blues, but never recaptured the peak of her folk career. Her legacy remains that of a foundational, yet often overlooked, voice whose music channeled the struggle and spirit of a movement.</p>
+
+                            <p>Her story of notable success without the financial windfall is a common theme for many other folk artists.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            
+                            <h5>Omitted <em>(overlooked)</em> stories</h5> 
+                            <p>Odetta's lack of mainstream success compared to peers like Joan Baez or Bob Dylan positions her biography as a helpful addition to the historical record. Her story highlights a foundational yet often overlooked figure whose artistic and political influence was immense.</p>
+                            
+                            <h5>Power</h5> 
+                            <p>While her career trajectory cannot be attributed to any single factor, Odetta's experience as a Black woman in mid-20th century America invites critical reflection on how race and gender shaped opportunities and recognition within the folk revival and the broader music industry.</p>
+
+                            <h5>What does it mean to be American?</h5> 
+                            <p>Odetta's life centralizes the complex question of what it means to be American. Her identity as a Black woman and her unofficial title as "the voice of the Civil Rights Movement" embody a narrative of struggle, resilience, and cultural contribution that challenges simpler national myths.</p>
+
+                            <h5>Resistance</h5> 
+                            <p>Odetta's deliberate choice to wear her hair in a natural afro, rather than conform to straightened styles, was a potent and visible act of political resistance. This personal statement defied beauty standards and asserted Black pride during a pivotal era for civil rights. Zack claims she was a trendsetter, the first notable Black woman to have an afro in American music.</p>
+
+                            <h5>Idealization</h5> 
+                            <p>Her story directly confronts the idyllic portrayal of 1950s America. Through her music and lived experience with segregation and racism, Odetta's biography reveals the tensions and injustices simmering beneath the era's often polished surface.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: lab(32.36% -23.37 17.22);">
+                                <i class="fas fa-book-open me-2"></i>I See, I Hear
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                   <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>Using the book as a reference, many songs, pictures and videos of Odetta can be collected.</p>
+                                <p>These can be shown and played for the class, with students writing down the observations based on what they hear and see.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+
+                    <!-- Classroom Critical Analysis Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-search me-2"></i>Critical Analysis for Class Activity
+                        </h3>
+                        <div class="read-more-section" id="broadzines-analysis-section">
+                            <div id="broadzines-analysis-content">
+                                <h5>Disability Consideration</h5>
+                                <p>This could be mentioned for every activity but here it feels more apparent. Disability should be considered for every class activity. In this case, if any students have visual or auditory disabilities, alternatives or accomodations should be considered.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-analysis-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>

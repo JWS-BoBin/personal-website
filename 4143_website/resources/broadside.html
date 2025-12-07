@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadside | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-xl {
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Broadside Magazine (Nos 1-110)
+                    </h1>
+                </div>
+                
+                <!-- APA Reference row -->
+                <div class="col-12 mb-4">
+                    <div class="apa-reference">
+                        <p id="apa-reference">
+                            Sing Out! Publications. (n.d.). <em>Broadside.</em> Retrieved December 3, 2025, from <a href="https://singout.org/broadside/">https://singout.org/broadside/</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image row - Two Pictures -->
+                <div class="col-12">
+                    <div class="d-flex flex-nowrap align-items-center justify-content-center py-3 overflow-auto">
+                        <!-- Container for both images with horizontal scrolling on very small screens -->
+                        <div class="d-flex flex-row gap-3" style="min-width: min-content;">
+                            <!-- First Image - Hidden on smaller screens -->
+                            <div class="text-center flex-shrink-0 d-none d-lg-block col-lg-6">
+                                <img src="../images/broadside_1_Page_1.jpg" 
+                                    alt="*******" 
+                                    class="img-fluid rounded shadow w-100"
+                                    style="max-height: 600px; object-fit: cover;"
+                                    id="source-image-1">
+                                    <p class="text-muted mt-3 small" id="image-caption">
+                                        <i class="fas fa-image me-1"></i>Issue 1, page 1
+                                    </p>
+                            </div>
+                            
+                            <!-- Second Image - Full width on small, half width on large -->
+                            <div class="text-center flex-shrink-0 col-12 col-lg-6">
+                                <img src="../images/broadside_23_Page_01.jpg" 
+                                    alt="****" 
+                                    class="img-fluid rounded shadow w-100"
+                                    style="max-height: 600px; object-fit: cover;"
+                                    id="source-image-2">
+                                    <p class="text-muted mt-3 small" id="image-caption">
+                                        <i class="fas fa-image me-1"></i>Issue 23, page 1
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+                <!-- Why This Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-question-circle me-2"></i>Why This Source
+                    </h2>
+                    <div class="read-more-section" id="whythis-section">
+                        <div id="whythis-content">
+                            <p>Founded by Agnes Cunningham and Gordon Friesen in 1962, Broadside was a magazine that covered the folk revival. (Dicaire,  2011)</p>
+                            
+                            <p><em>Broadside</em> is an amazing primary source that provides contemporary context, songs and plenty of options for class interaction.</p>
+            
+                            <p>Issues, or sections of issues, can be selected for curated activities, making it highly adaptable for educational use.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="whythis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p><em>Broadside</em> was a popular magazine created within and centered around the folk music scene of the 1960s.</p>
+                            
+                            <p>It was a unique combination of songbook, poetry, photocopied news articles, and other elements such as the occasional cartoon.</p>
+
+                            <p>It featured contributions from major folk and protest music figures, including Bob Dylan, Phil Ochs, Pete Seeger, and Nina Simone.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Omitted stories</h5>
+                                <p>As a document centered on the folk scene's perspective, <em>Broadside</em> provides a specific look into the political counterculture of the 1960s. Its focus necessarily omits or provides a counter-narrative to the stories promoted by contemporary government and corporate media, offering a curated view of the era's struggles and triumphs from the ground level.</p>
+
+                            <h5>Power & resistance</h5>
+                                <p><em>Broadside</em> was a vocal critic of the political and social establishment, using song and commentary as direct tools of protest. Simultaneously, it functioned as an empowering platform that circumvented mainstream media, giving a direct voice and promotional power to songwriters whose work challenged the status quo.</p>
+
+                            <h5>Solidarity</h5>
+                                <p>The magazine served as a vital nexus for the folk community, fostering a shared identity and political consciousness. By publishing lyrics, stories, and news, it created a common text and purpose that brought artists and activists together across the country.</p>
+
+                            <h5>Joy as Resistance</h5>
+                                <p>Beyond its protest material, the magazine was a celebration of folk music and folk culture. This celebration—through sharing songs, cartoons, and poetry—was itself an act of resistance, affirming the value and vitality of a culture that stood outside the commercial mainstream.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+
+
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Broad-zines
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>Combining the ideas and style of zines with Broadside, these Broad-zines offer a creative approach to engaging with the folk music revival material.</p>
+                                <p>Students could write poems (or music if they have the skillset), draw cartoons and insert news articles they find interesting and relevant.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text...."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>
